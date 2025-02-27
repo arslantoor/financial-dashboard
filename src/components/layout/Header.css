@@ -1,0 +1,168 @@
+.header {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-container {
+  padding: 20px 25px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .header-container {
+    padding: 20px 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 20px 2rem;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: #6B7280;
+  display: block;
+}
+
+.menu-button:hover {
+  color: #4B5563;
+  background-color: #F3F4F6;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #343C6A;
+  font-family: 'Inter', sans-serif;
+  margin-left: 8px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.search-container {
+  position: relative;
+  display: block;
+}
+
+.search-input {
+  padding-left: 3rem;
+  padding-right: 1rem;
+  height: 50px;
+  border-radius: 9999px;
+  background-color: #F5F7FA;
+  color: #6B7280;
+  width: 255px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-button {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: #F5F7FA;
+  color: #6B7280;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  color: #4B5563;
+}
+
+.avatar-button {
+  border-radius: 9999px;
+  color: #6B7280;
+  display: block;
+}
+
+.avatar-button:hover {
+  color: #4B5563;
+}
+
+.avatar-image {
+  height: 60px;
+  width: 60px;
+  border-radius: 9999px;
+}
+
+.search-mobile {
+  display: block;
+  margin-top: 1rem;
+}
+.search-mobile-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.search-desktop {
+  display: block;
+  position: relative;
+
+}
+
+@media (max-width: 767px) {
+  .header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+  .search-input ,
+  .search-container {
+    width: 100%;
+  }
+  .search-desktop,
+  .icon-button {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .search-mobile {
+    display: none;
+  }
+} 

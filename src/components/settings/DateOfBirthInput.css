@@ -1,0 +1,26 @@
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+input[type="date"]::-moz-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+input[type="date"]::-ms-clear,
+input[type="date"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+} 

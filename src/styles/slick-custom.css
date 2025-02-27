@@ -1,0 +1,23 @@
+.slick-slider {
+  width: 100%;
+  position: relative;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Hide default slick arrows */
+.slick-prev,
+.slick-next {
+  display: none !important;
+} 
