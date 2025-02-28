@@ -76,15 +76,7 @@ const LineChartComponent = ({ data, title }) => {
               },
             },
           },
-        },
-        layout: {
-          padding: {
-            top: 10,
-            right: 10,
-            bottom: 0,
-            left: 10,
-          },
-        },
+        }
       },
     })
 
@@ -100,7 +92,7 @@ const LineChartComponent = ({ data, title }) => {
   return (
     <div className="w-full overflow-hidden">
       <h3 className="ttext-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
-      <div className={`${cardStyle} h-[275px] w-full p-3`}>
+      <div className={`${cardStyle} h-auto md:h-[275px] w-full p-1 md:p-3`}>
         <canvas ref={chartRef}></canvas>
       </div>
     </div>

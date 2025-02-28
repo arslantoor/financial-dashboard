@@ -79,16 +79,81 @@ yarn start
 
 ```
 financial-dashboard/
-├── src/
-│   ├── components/      # React components
-│   ├── hooks/          # Custom hooks
-│   ├── pages/          # Page components
-│   ├── services/       # API services
-│   ├── store/          # Redux store
-│   └── styles/         # CSS styles
-├── public/             # Static assets
-├── server.js           # JSON Server configuration
-└── db.json            # Mock database
+├── db.json
+├── eslint.config.mjs
+├── index.html
+├── LICENSE
+├── package.json
+├── postcss.config.js
+├── README.md
+├── server.js
+├── src
+│   ├── App.js
+│   ├── components
+│   │   ├── cards
+│   │   │   ├── CardChip.js
+│   │   │   ├── CardItem.css
+│   │   │   ├── CardItem.js
+│   │   │   ├── CreditCardListing.js
+│   │   │   ├── QuickTransferCard.js
+│   │   │   └── QuickTransferContact.js
+│   │   ├── charts
+│   │   │   ├── BarChartComponent.js
+│   │   │   ├── LineChartComponent.js
+│   │   │   └── PieChartComponent.js
+│   │   ├── error
+│   │   │   └── ErrorBoundary.js
+│   │   ├── layout
+│   │   │   ├── Header.css
+│   │   │   ├── Header.js
+│   │   │   ├── Layout.js
+│   │   │   ├── NavItems.js
+│   │   │   └── Sidebar.js
+│   │   ├── settings
+│   │   │   ├── DateOfBirthInput.css
+│   │   │   ├── DateOfBirthInput.js
+│   │   │   ├── FormInput.js
+│   │   │   ├── PreferencesSettings.js
+│   │   │   ├── ProfileForm.js
+│   │   │   ├── ProfileSettings.js
+│   │   │   ├── SecuritySettings.js
+│   │   │   └── TabsComponent.js
+│   │   ├── transactions
+│   │   │   └── TransactionItem.js
+│   │   └── ui
+│   │       ├── NavItems.js
+│   │       └── Search.js
+│   ├── hooks
+│   │   ├── useCards.js
+│   │   ├── useContacts.js
+│   │   ├── useInitialData.js
+│   │   ├── useStatistics.js
+│   │   └── useTransactions.js
+│   ├── index.css
+│   ├── index.js
+│   ├── pages
+│   │   ├── CreditCards.js
+│   │   ├── Dashboard.js
+│   │   └── Settings.js
+│   ├── routes
+│   │   └── routes.js
+│   ├── services
+│   │   └── api.js
+│   ├── store
+│   │   ├── slices
+│   │   │   ├── cardsSlice.js
+│   │   │   ├── statisticsSlice.js
+│   │   │   ├── transactionsSlice.js
+│   │   │   └── userSlice.js
+│   │   └── store.js
+│   └── styles
+│       ├── globals.css
+│       └── slick-custom.css
+├── tailwind.config.js
+├── vercel-build.sh
+├── vercel.json
+├── vite.config.js
+└── yarn.lock
 ```
 
 ## API Endpoints

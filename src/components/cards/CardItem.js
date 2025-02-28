@@ -16,7 +16,6 @@ const CardItem = ({ card }) => {
               ${balance.toLocaleString()}
             </p>
           </div>
-
           <CardChip isDark={isDark} />
         </div>
 

@@ -47,8 +47,8 @@ const PieChartComponent = ({ data, title }) => {
       const labelRadius = (d.profit * 4) / 2 // Position label at half the radius
       var labelX = Math.sin(labelAngle) * labelRadius + 5
       const labelY = -Math.cos(labelAngle) * labelRadius - 5 // tollerence for the label
-      
-        // Add category label
+
+      // Add category label
       g.append('text')
         .attr('transform', `translate(${labelX}, ${labelY})`)
         .attr('text-anchor', 'middle')

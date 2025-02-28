@@ -7,6 +7,7 @@ Chart.register(...registerables)
 const BarChartComponent = ({ data, title }) => {
   const chartRef = useRef(null)
   const chartInstance = useRef(null)
+  const isMobile = window.innerWidth < 768
 
   useEffect(() => {
     // If a chart instance exists, destroy it before creating a new one
@@ -25,9 +26,9 @@ const BarChartComponent = ({ data, title }) => {
         labels: data.labels,
         datasets: data.datasets.map((dataset) => ({
           ...dataset,
-          borderRadius: 10,
+          borderRadius: 5,
+          maxBarThickness: isMobile ? 8 : 15,
           borderSkipped: false,
-          maxBarThickness: 15,
         })),
       },
       options: {
@@ -39,7 +40,7 @@ const BarChartComponent = ({ data, title }) => {
             align: 'end',
             labels: {
               boxHeight: 8,
-              boxWidth: 8,
+              boxWidth: 13,
               usePointStyle: true,
               pointStyle: 'circle',
               padding: 8,
@@ -100,15 +101,7 @@ const BarChartComponent = ({ data, title }) => {
               display: false,
             },
           },
-        },
-        layout: {
-          padding: {
-            top: 10,
-            right: 0,
-            bottom: 0,
-            left: 0,
-          },
-        },
+        }
       },
     })
 
@@ -118,14 +111,14 @@ const BarChartComponent = ({ data, title }) => {
         chartInstance.current.destroy()
       }
     }
-  }, [data])
+  }, [data, isMobile])
   const cardStyle = 'bg-white rounded-[25px] border border-lightBorder shadow-sm'
 
   return (
     <div className="w-full overflow-hidden md:col-span-2 sm:col-span-3">
       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
-      <div className={`${cardStyle} h-[320px] w-full flex items-center justify-center`}>
-        <canvas ref={chartRef}></canvas>
+      <div className={`${cardStyle} h-auto py-2 md:p-4 md:h-[320px] w-full flex items-center justify-center`}>
+        <canvas className='w-full' ref={chartRef}></canvas>
       </div>
     </div>
   )
