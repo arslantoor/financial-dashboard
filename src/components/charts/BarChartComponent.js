@@ -12,8 +12,11 @@ const BarChartComponent = ({ data, title }) => {
   useEffect(() => {
     // If a chart instance exists, destroy it before creating a new one
     if (!data || !data.labels || !data.datasets) return
-    if (chartInstance.current) {
+
+    // Destroy existing chart before creating a new one
+    if (chartInstance.current instanceof Chart) {
       chartInstance.current.destroy()
+      chartInstance.current = null // Prevent stale reference
     }
 
     // Get the canvas context
@@ -107,8 +110,9 @@ const BarChartComponent = ({ data, title }) => {
 
     // Cleanup function to destroy chart when component unmounts
     return () => {
-      if (chartInstance.current) {
+      if (chartInstance.current instanceof Chart) {
         chartInstance.current.destroy()
+        chartInstance.current = null
       }
     }
   }, [data, isMobile])

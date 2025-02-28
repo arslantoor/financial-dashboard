@@ -4,6 +4,10 @@ import { fetchCurrentUser } from '../store/slices/userSlice'
 
 export const useInitialData = () => {
   const dispatch = useDispatch()
-
-  useEffect(() => dispatch(fetchCurrentUser()), [dispatch])
+  useEffect(() => {
+    const fetchData = async () => {
+      await dispatch(fetchCurrentUser()) // ✅ Ensures proper async handling
+    }
+    fetchData()
+  }, [dispatch])
 }

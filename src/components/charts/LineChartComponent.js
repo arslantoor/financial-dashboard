@@ -10,8 +10,9 @@ const LineChartComponent = ({ data, title }) => {
 
   useEffect(() => {
     // If a chart instance exists, destroy it before creating a new one
-    if (chartInstance.current) {
+    if (chartInstance.current instanceof Chart) {
       chartInstance.current.destroy()
+      chartInstance.current = null // Prevent stale reference
     }
 
     // Get the canvas context
@@ -82,8 +83,9 @@ const LineChartComponent = ({ data, title }) => {
 
     // Cleanup function to destroy chart when component unmounts
     return () => {
-      if (chartInstance.current) {
+      if (chartInstance.current instanceof Chart) {
         chartInstance.current.destroy()
+        chartInstance.current = null // Prevent stale reference
       }
     }
   }, [data])

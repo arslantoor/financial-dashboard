@@ -55,45 +55,45 @@
       "id": 1,
       "balance": 5756,
       "cardHolder": "Eddy Cusuma",
-      "validThru": "12/22",
+      "validThru": "12/25",
       "cardNumber": "3778 **** **** 1234",
       "type": "dark"
     },
     {
       "id": 2,
-      "balance": 5756,
-      "cardHolder": "Eddy Cusuma",
-      "validThru": "12/22",
-      "cardNumber": "3778 **** **** 1234",
+      "balance": 4921,
+      "cardHolder": "John Smith",
+      "validThru": "12/25",
+      "cardNumber": "3878 **** **** 4254",
       "type": "light"
     },
     {
       "id": 3,
-      "balance": 3200,
-      "cardHolder": "Eddy Cusuma",
+      "balance": 3215,
+      "cardHolder": "Michael Williams",
       "validThru": "10/23",
       "cardNumber": "4539 **** **** 5678",
       "type": "dark"
     },{
       "id": 4,
-      "balance": 4500,
-      "cardHolder": "Eddy Cusuma",
+      "balance": 4503,
+      "cardHolder": "David Jones",
       "validThru": "11/24",
       "cardNumber": "6011 **** **** 9012",
       "type": "light"
     },
     {
       "id": 5,
-      "balance": 1500,
-      "cardHolder": "Eddy Cusuma",
+      "balance": 1570,
+      "cardHolder": "Linda Miller",
       "validThru": "09/25",
       "cardNumber": "5105 **** **** 3456",
       "type": "dark"
     },
     {
       "id": 6,
-      "balance": 8000,
-      "cardHolder": "Eddy Cusuma",
+      "balance": 8060,
+      "cardHolder": "William Taylor",
       "validThru": "08/26",
       "cardNumber": "4111 **** **** 7890",
       "type": "light"

@@ -11,15 +11,16 @@
     "concurrently": "^9.1.2",
     "d3": "^7.8.5",
     "json-server": "^0.17.4",
+    "prettier": "^3.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^5.0.0",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.1",
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.5",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4",
-    "prettier": "^3.5.2"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "dev": "vite",

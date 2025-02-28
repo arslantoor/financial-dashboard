@@ -17,7 +17,7 @@ const CreditCards = ({ cards }) => {
       </div>
       <div className="flex overflow-x-auto gap-3 sm:gap-4 md:gap-6">
         {cards.slice(0, 2).map((card) => (
-          <div key={card.id} className="w-[50%]">
+          <div key={card.id} className="w-[50%] min-w-[265px] md:min-w-[350px]">
             <CardItem card={card} />
           </div>
         ))}
