@@ -77,7 +77,7 @@ const PieChartComponent = ({ data, title }) => {
     <div className="w-full overflow-hidden">
       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
       <div className={`${cardStyle} h-[320px] w-full flex items-center justify-center`}>
-        <svg ref={chartRef} width="320px" height="320px"></svg>
+        <svg ref={chartRef} width="320px" height="320px" />
       </div>
     </div>
   )
