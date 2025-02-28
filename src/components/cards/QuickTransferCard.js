@@ -1,13 +1,14 @@
-import React, { useState, useRef } from 'react'
-
-import QuickTransferContact from './QuickTransferContact'
+import Tooltip from '@/components/common/tooltip/Tooltip.js'
 
 import { Icon } from '@iconify/react'
+import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import { toast } from 'react-toastify'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+
+import QuickTransferContact from './QuickTransferContact'
 import '../../styles/slick-custom.css'
 
 const QuickTransferCard = ({ contacts, cardStyle }) => {
@@ -78,8 +79,8 @@ const QuickTransferCard = ({ contacts, cardStyle }) => {
         !amount && !selectedContact
           ? 'Please select a contact and enter an amount'
           : !amount
-          ? 'Please enter an amount'
-          : 'Please select a contact'
+            ? 'Please enter an amount'
+            : 'Please select a contact'
       )
       return
     }
@@ -100,21 +101,22 @@ const QuickTransferCard = ({ contacts, cardStyle }) => {
           <div className="relative">
             <div className="overflow-hidden">
               <Slider key={contacts.length} ref={sliderRef} {...settings}>
-                {contacts.map((contact, index) => { 
+                {contacts.map((contact, index) => {
                   const isSelected = selectedContact?.id === contact.id
-                  return(
-                  <div
-                    onClick={(e) => {
-                      e.preventDefault()
+                  return (
+                    <div
+                      onClick={(e) => {
+                        e.preventDefault()
 
-                      setSelectedContact(isSelected ? null : contact)
-                    }}
-                    key={index}
-                    className="outline-none z-10 cursor-pointer"
-                  >
-                    <QuickTransferContact selected={isSelected} contact={contact} />
-                  </div>
-                )})}
+                        setSelectedContact(isSelected ? null : contact)
+                      }}
+                      key={index}
+                      className="outline-none z-10 cursor-pointer"
+                    >
+                      <QuickTransferContact selected={isSelected} contact={contact} />
+                    </div>
+                  )
+                })}
               </Slider>
             </div>
           </div>
@@ -138,13 +140,16 @@ const QuickTransferCard = ({ contacts, cardStyle }) => {
                 className="w-full h-10 px-[30px] bg-[#F8F9FA] rounded-full text-sm focus:outline-none"
               />
             </div>
-            <button
-              onClick={handleSend}
-              className="w-50 z-10 h-10 px-4 bg-[#1A1A1A] text-white rounded-full flex items-center space-x-1 hover:bg-black transition-colors"
-            >
-              <span className="text-sm mr-1">Send</span>
-              <Icon icon="fa-regular:paper-plane" className="w-4 h-4" />
-            </button>
+            <Tooltip text="Send Transation to selected user" position="top">
+              <button
+                onClick={handleSend}
+                className="w-50 z-10 h-10 px-4 bg-[#1A1A1A] text-white rounded-full flex items-center space-x-1 hover:bg-black transition-colors"
+              >
+                <span className="text-sm mr-1">Send</span>
+
+                <Icon icon="fa-regular:paper-plane" className="w-4 h-4" />
+              </button>
+            </Tooltip>
           </div>
         </div>
       </div>

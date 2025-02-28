@@ -1,3 +1,4 @@
+import Tooltip from '@/components/common/tooltip/Tooltip.js'
 import React, { useState, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { updateUser } from '../../store/slices/userSlice'
@@ -258,13 +259,15 @@ const ProfileForm = () => {
       </div>
 
       <div className="flex justify-center md:justify-end">
-        <button
-          disabled={!isChanged}
-          type="submit"
-          className={`w-full md:w-[190px] h-[50px] rounded-[15px] transition-colors ${isChanged ? 'bg-[#232323] text-white hover:bg-gray-800' : 'bg-gray-400 text-gray-200'}`}
-        >
-          Save
-        </button>
+        <Tooltip text="Save information" position="top">
+          <button
+            disabled={!isChanged}
+            type="submit"
+            className={`w-full md:w-[190px] h-[50px] rounded-[15px] transition-colors ${isChanged ? 'bg-[#232323] text-white hover:bg-gray-800' : 'bg-gray-400 text-gray-200'}`}
+          >
+            Save
+          </button>
+        </Tooltip>
       </div>
     </form>
   )

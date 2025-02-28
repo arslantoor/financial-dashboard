@@ -3,22 +3,7 @@ import { lazy, Suspense } from 'react'
 const Dashboard = lazy(() => import('../pages/Dashboard'))
 const Settings = lazy(() => import('../pages/Settings'))
 const CreditCards = lazy(() => import('../pages/CreditCards'))
-import { Icon } from '@iconify/react'
-
-const LazyWrapper = (Component) => (
-  <Suspense
-    fallback={
-      <Icon
-        icon="svg-spinners:270-ring"
-        className="text-lg font-semibold animate-spin"
-        width="50"
-        height="50"
-      />
-    }
-  >
-    <Component />
-  </Suspense>
-)
+import LazyWrapper from '@/components/common/LazyWrapper.js'
 
 export const routes = [
   { path: '/', element: LazyWrapper(Dashboard), index: true },
