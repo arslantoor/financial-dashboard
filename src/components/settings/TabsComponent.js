@@ -1,4 +1,17 @@
+import { useCallback } from 'react'
+
 const TabsComponent = ({ tabs, activeTab, setActiveTab }) => {
+  /**
+   * Handles tab click and sets the active tab
+   * @param {string|number} id - The tab id to set active
+   */
+  const handleTabClick = useCallback(
+    (id) => {
+      setActiveTab(id)
+    },
+    [setActiveTab]
+  )
+
   return (
     <div className="border-b border-gray-200 justify-items-center md:justify-items-start">
       <nav className="w-full flex justify-between sm:justify-evenly md:justify-start -mb-px gap-[10px] md:gap-[74px]">
@@ -10,7 +23,7 @@ const TabsComponent = ({ tabs, activeTab, setActiveTab }) => {
                 ? 'border-black text-black'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             }`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={handleTabClick.bind(null, tab.id)}
           >
             {tab.label}
           </button>

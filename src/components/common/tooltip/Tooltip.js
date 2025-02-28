@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, cloneElement } from 'react'
+import { useState, useRef, useEffect, cloneElement } from 'react'
 import { createPortal } from 'react-dom'
 
 const Tooltip = ({ children, text, position = 'top' }) => {
