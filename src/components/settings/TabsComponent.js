@@ -1,7 +1,16 @@
+import { useCallback } from 'react'
+
 const TabsComponent = ({ tabs, activeTab, setActiveTab }) => {
-  const handleTabClick = (id) => {
-    setActiveTab(id)
-  }
+  /**
+   * Handles tab click and sets the active tab
+   * @param {string|number} id - The tab id to set active
+   */
+  const handleTabClick = useCallback(
+    (id) => {
+      setActiveTab(id)
+    },
+    [setActiveTab]
+  )
 
   return (
     <div className="border-b border-gray-200 justify-items-center md:justify-items-start">
@@ -14,7 +23,7 @@ const TabsComponent = ({ tabs, activeTab, setActiveTab }) => {
                 ? 'border-black text-black'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             }`}
-            onClick={() => handleTabClick(tab.id)} // ✅ Clean function
+            onClick={handleTabClick.bind(null, tab.id)}
           >
             {tab.label}
           </button>

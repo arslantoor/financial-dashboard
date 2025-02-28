@@ -9,7 +9,6 @@ const DateOfBirthInput = ({ label, name, value, onChange }) => {
   }
 
   const handleDateChange = (e) => {
-    const { value } = e.target
     const date = new Date(value)
     if (!isNaN(date.getTime())) {
       const formattedDate = `${date.getDate()} ${date.toLocaleString('default', {

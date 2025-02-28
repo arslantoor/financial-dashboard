@@ -100,7 +100,7 @@ const QuickTransferCard = ({ contacts, cardStyle }) => {
           <div className="relative">
             <div className="overflow-hidden">
               <Slider key={contacts.length} ref={sliderRef} {...settings}>
-                {contacts.map((contact, index) => {
+                {contacts.map((contact) => {
                   const isSelected = selectedContact?.id === contact.id
                   return (
                     <div
