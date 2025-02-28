@@ -51,8 +51,8 @@ const CardItem = ({ card }) => {
             {cardNumber}
           </p>
           <div className="card-circles">
-            <div className={isDark ? 'card-circle-dark' : 'card-circle-light'}></div>
-            <div className={isDark ? 'card-circle-dark' : 'card-circle-light'}></div>
+            <div className={isDark ? 'card-circle-dark' : 'card-circle-light'} />
+            <div className={isDark ? 'card-circle-dark' : 'card-circle-light'} />
           </div>
         </div>
       </div>

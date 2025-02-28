@@ -95,7 +95,7 @@ const LineChartComponent = ({ data, title }) => {
     <div className="w-full overflow-hidden">
       <h3 className="ttext-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
       <div className={`${cardStyle} h-auto md:h-[275px] w-full p-1 md:p-3`}>
-        <canvas ref={chartRef}></canvas>
+        <canvas ref={chartRef} />
       </div>
     </div>
   )
