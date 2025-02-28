@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 
 const PieChartComponent = ({ data, title }) => {
@@ -45,7 +45,7 @@ const PieChartComponent = ({ data, title }) => {
       // Calculate position for the text label
       const labelAngle = currentAngle + angle / 2
       const labelRadius = (d.profit * 4) / 2 // Position label at half the radius
-      var labelX = Math.sin(labelAngle) * labelRadius + 5
+      const labelX = Math.sin(labelAngle) * labelRadius + 5
       const labelY = -Math.cos(labelAngle) * labelRadius - 5 // tollerence for the label
 
       // Add category label
@@ -77,7 +77,7 @@ const PieChartComponent = ({ data, title }) => {
     <div className="w-full overflow-hidden">
       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
       <div className={`${cardStyle} h-[320px] w-full flex items-center justify-center`}>
-        <svg ref={chartRef} width="320px" height="320px"></svg>
+        <svg ref={chartRef} width="320px" height="320px" />
       </div>
     </div>
   )

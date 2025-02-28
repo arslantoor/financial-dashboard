@@ -1,7 +1,6 @@
 import Tooltip from '@/components/common/tooltip/Tooltip.js'
-
 import { Icon } from '@iconify/react'
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import { toast } from 'react-toastify'
 
@@ -88,7 +87,7 @@ const QuickTransferCard = ({ contacts, cardStyle }) => {
     setAmount('')
     setSelectedContact(null)
   }
-  console.log(selectedContact)
+
   return (
     <div className="w-full d-flex flex-col">
       <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">
@@ -110,7 +109,7 @@ const QuickTransferCard = ({ contacts, cardStyle }) => {
 
                         setSelectedContact(isSelected ? null : contact)
                       }}
-                      key={index}
+                      key={contact.id}
                       className="outline-none z-10 cursor-pointer"
                     >
                       <QuickTransferContact selected={isSelected} contact={contact} />

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const QuickTransferContact = ({ contact, selected }) => {
   const { avatar, name = 'Unknown', role = 'N/A' } = contact

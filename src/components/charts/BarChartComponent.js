@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Chart, registerables } from 'chart.js'
 
 // Register all Chart.js components
@@ -122,7 +122,7 @@ const BarChartComponent = ({ data, title }) => {
     <div className="w-full overflow-hidden md:col-span-2 sm:col-span-3">
       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-4">{title}</h3>
       <div className={`${cardStyle} h-auto py-2 md:p-4 md:h-[320px] w-full flex items-center justify-center`}>
-        <canvas className='w-full' ref={chartRef}></canvas>
+        <canvas className='w-full' ref={chartRef} />
       </div>
     </div>
   )

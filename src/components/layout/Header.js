@@ -1,4 +1,3 @@
-import React from 'react'
 import './Header.css'
 import Search from '../ui/Search'
 import { useSelector } from 'react-redux'

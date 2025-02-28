@@ -1,4 +1,3 @@
-import React from 'react'
 import TransactionItem from '../components/transactions/TransactionItem'
 import BarChartComponent from '../components/charts/BarChartComponent'
 import PieChartComponent from '../components/charts/PieChartComponent'

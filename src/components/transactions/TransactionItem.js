@@ -1,7 +1,5 @@
-import React from 'react'
-
 const TransactionItem = ({ transaction }) => {
-  const { description, date, amount, iconBg, iconColor, from } = transaction
+  const { description, date, amount, iconBg, from } = transaction
 
   const isExpense = amount < 0
   const formattedAmount = isExpense
@@ -62,7 +60,7 @@ const TransactionItem = ({ transaction }) => {
   return (
     <div className="flex items-center space-x-[15px]">
       <div
-        className={`w-[55px] h-[55px] rounded-full flex items-center justify-center`}
+        className={"w-[55px] h-[55px] rounded-full flex items-center justify-center"}
         style={{ backgroundColor: iconBg }}
       >
         {paymentFrom[from]}

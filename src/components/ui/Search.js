@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Search = ({ placeholder = 'Search for something', className = '' }) => {
   return (
     <div className={`search-container ${className}`}>
