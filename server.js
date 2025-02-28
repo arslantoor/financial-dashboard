@@ -27,4 +27,3 @@ server.get('/api/health', (req, res) => {
 server.use('/api', router)
 
 const PORT = process.env.PORT || 3001
-server.listen(PORT, () => {})

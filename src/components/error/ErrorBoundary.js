@@ -2,6 +2,15 @@ import { ErrorBoundary } from 'react-error-boundary'
 import PropTypes from 'prop-types'
 import { memo, useCallback } from 'react'
 
+/**
+ * Fallback component to display error messages when an error is caught.
+ *
+ * @component
+ * @param {object} props - Component props
+ * @param {Error} props.error - Error object containing message and stack trace
+ * @param {function} props.resetErrorBoundary - Function to reset the error boundary
+ * @returns {JSX.Element} Rendered fallback UI
+ */
 const ErrorFallback = memo(({ error, resetErrorBoundary }) => {
   const handleReset = useCallback(() => {
     resetErrorBoundary()
@@ -37,6 +46,14 @@ ErrorFallback.propTypes = {
   resetErrorBoundary: PropTypes.func.isRequired,
 }
 
+/**
+ * Global error boundary wrapper for the entire application.
+ *
+ * @component
+ * @param {object} props - Component props
+ * @param {React.ReactNode} props.children - Child components to wrap inside the error boundary
+ * @returns {JSX.Element} Rendered component with error boundary
+ */
 const AppErrorBoundary = ({ children }) => (
   <ErrorBoundary FallbackComponent={ErrorFallback}>{children}</ErrorBoundary>
 )
