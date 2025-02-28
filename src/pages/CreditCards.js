@@ -1,4 +1,3 @@
-import React from 'react'
 import CardItem from '../components/cards/CardItem'
 import { useCards } from '../hooks/useCards'
 

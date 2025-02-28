@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TabsComponent = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <div className="border-b border-gray-200 justify-items-center md:justify-items-start">

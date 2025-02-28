@@ -1,4 +1,3 @@
-import React from 'react'
 import './DateOfBirthInput.css'
 
 const DateOfBirthInput = ({ label, name, value, onChange }) => {

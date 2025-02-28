@@ -1,7 +1,5 @@
-import React from 'react'
-
 const TransactionItem = ({ transaction }) => {
-  const { description, date, amount, iconBg, iconColor, from } = transaction
+  const { description, date, amount, iconBg, from } = transaction
 
   const isExpense = amount < 0
   const formattedAmount = isExpense

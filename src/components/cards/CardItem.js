@@ -1,4 +1,3 @@
-import React from 'react'
 import './CardItem.css'
 import CardChip from './CardChip'
 const CardItem = ({ card }) => {

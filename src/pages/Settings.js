@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import TabsComponent from '../components/settings/TabsComponent'
 import ProfileForm from '../components/settings/ProfileForm'
 

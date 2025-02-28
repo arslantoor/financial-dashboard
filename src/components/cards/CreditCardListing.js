@@ -1,5 +1,4 @@
 import Tooltip from '@/components/common/tooltip/Tooltip.js'
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import CardItem from './CardItem'
 
