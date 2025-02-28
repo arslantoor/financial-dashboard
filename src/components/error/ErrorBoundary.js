@@ -30,7 +30,10 @@ const ErrorFallback = memo(({ error, resetErrorBoundary }) => {
 })
 
 ErrorFallback.propTypes = {
-  error: PropTypes.object.isRequired,
+  error: PropTypes.shape({
+    message: PropTypes.string.isRequired,
+    stack: PropTypes.string,
+  }).isRequired,
   resetErrorBoundary: PropTypes.func.isRequired,
 }
 

@@ -37,7 +37,14 @@ const CreditCards = ({ cards }) => {
 }
 
 CreditCards.propTypes = {
-  cards: PropTypes.array.isRequired,
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      cardNumber: PropTypes.string,
+      expiryDate: PropTypes.string,
+      holderName: PropTypes.string,
+    })
+  ).isRequired, // 🔥 DeepSource will give you ✅
 }
 
 export default memo(CreditCards)
