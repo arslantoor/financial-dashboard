@@ -1,0 +1,186 @@
+{
+  "currentUser": {
+    "id": 1,
+    "name": "Eddy Cusuma",
+    "email": "eddy@example.com",
+    "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+    "userName": "Eddy Cusuma",
+    "password": "Eddy123",
+    "dateOfBirth": "1990-01-01",
+    "presentAddress": "San Jose, California, USA",
+    "permanentAddress": "San Jose, California, USA",
+    "city": "San Jose",
+    "postalCode": "45962",
+    "country": "USA"
+  },
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Licia Baker",
+      "role": "Ceo",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "isOnline": true
+    },
+    {
+      "id": 2,
+      "name": "Randy Press",
+      "role": "Director",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "isOnline": true
+    },
+    {
+      "id": 3,
+      "name": "Workman",
+      "role": "Designer",
+      "avatar": "https://randomuser.me/api/portraits/men/46.jpg",
+      "isOnline": false
+    },
+    {
+      "id": 4,
+      "name": "John Doe",
+      "role": "Developer",
+      "avatar": "https://randomuser.me/api/portraits/men/48.jpg",
+      "isOnline": false
+    },
+    {
+      "id": 5,
+      "name": "Jane",
+      "role": "Teacher",
+      "avatar": "https://randomuser.me/api/portraits/women/48.jpg",
+      "isOnline": false
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "balance": 5756,
+      "cardHolder": "Eddy Cusuma",
+      "validThru": "12/25",
+      "cardNumber": "3778 **** **** 1234",
+      "type": "dark"
+    },
+    {
+      "id": 2,
+      "balance": 4921,
+      "cardHolder": "John Smith",
+      "validThru": "12/25",
+      "cardNumber": "3878 **** **** 4254",
+      "type": "light"
+    },
+    {
+      "id": 3,
+      "balance": 3215,
+      "cardHolder": "Michael Williams",
+      "validThru": "10/23",
+      "cardNumber": "4539 **** **** 5678",
+      "type": "dark"
+    },{
+      "id": 4,
+      "balance": 4503,
+      "cardHolder": "David Jones",
+      "validThru": "11/24",
+      "cardNumber": "6011 **** **** 9012",
+      "type": "light"
+    },
+    {
+      "id": 5,
+      "balance": 1570,
+      "cardHolder": "Linda Miller",
+      "validThru": "09/25",
+      "cardNumber": "5105 **** **** 3456",
+      "type": "dark"
+    },
+    {
+      "id": 6,
+      "balance": 8060,
+      "cardHolder": "William Taylor",
+      "validThru": "08/26",
+      "cardNumber": "4111 **** **** 7890",
+      "type": "light"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "type": "expense",
+      "description": "Deposit from my Card",
+      "date": "28 January 2021",
+      "amount": -850,
+      "category": "transfer",
+      "iconBg": "#FFF5D9",
+      "iconColor": "#FFBB38",
+      "from": "Card"
+    },
+    {
+      "id": 2,
+      "type": "income",
+      "description": "Deposit Paypal",
+      "date": "25 January 2021",
+      "amount": 2500,
+      "category": "deposit",
+      "iconBg": "#E7EDFF",
+      "iconColor": "#396AFF",
+      "from": "Paypal"
+    },
+    {
+      "id": 3,
+      "type": "income",
+      "description": "Jemi Wilson",
+      "date": "21 January 2021",
+      "amount": 5400,
+      "category": "transfer",
+      "iconBg": "#DCFAF8",
+      "iconColor": "#16DBCC",
+      "from": "Bank"
+    },
+    {
+      "id": 4,
+      "type": "expense",
+      "description": "Grocery Shopping",
+      "date": "20 January 2021",
+      "amount": -150,
+      "category": "shopping",
+      "iconBg": "#FFE4E1",
+      "iconColor": "#FF6347",
+      "from": "Card"
+    },
+    {
+      "id": 5,
+      "type": "income",
+      "description": "Salary",
+      "date": "15 January 2021",
+      "amount": 3000,
+      "category": "salary",
+      "iconBg": "#E0FFE0",
+      "iconColor": "#32CD32",
+      "from": "Company"
+    }
+  ],
+  "statistics": {
+    "weeklyActivity": {
+      "labels": ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+      "datasets": [
+        {
+          "label": "Withdraw",
+          "data": [450, 320, 280, 450, 150, 380, 380],
+          "backgroundColor": "#1C1E23"
+        },
+        {
+          "label": "Deposit",
+          "data": [220, 110, 250, 350, 230, 230, 300],
+          "backgroundColor": "#4461F2"
+        }
+      ]
+    },
+    "expenseStatistics": [
+      { "category": "Bill Expense", "profit": 34, "percentage": 15, "color": "#FC7900" },
+      { "category": "Others", "profit": 30, "percentage": 25, "color": "#232323" },
+      { "category": "Investment", "profit": 27, "percentage": 35, "color": "#396AFF" },
+      { "category": "Entertainment", "profit": 32, "percentage": 40, "color": "#343C6A" }
+    ],
+    "balanceHistory": {
+      "labels": ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec","Jan",""],
+      "data":[125, 320, 155, 750, 205, 590, 225, 650]
+    }
+  }
+} 
