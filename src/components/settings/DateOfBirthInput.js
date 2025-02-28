@@ -9,19 +9,21 @@ const DateOfBirthInput = ({ label, name, value, onChange }) => {
   }
 
   const handleDateChange = (e) => {
-    const date = new Date(e.target.value)
+    const { value } = e.target
+    const date = new Date(value)
     if (!isNaN(date.getTime())) {
-      const day = date.getDate()
-      const month = date.toLocaleString('default', { month: 'long' })
-      const year = date.getFullYear()
-      const formattedDate = `${day} ${month} ${year}`
+      const formattedDate = `${date.getDate()} ${date.toLocaleString('default', {
+        month: 'long',
+      })} ${date.getFullYear()}`
       onChange({ target: { name, value: formattedDate } })
     }
   }
 
+  const maxDate = new Date().toISOString().split('T')[0]
+
   return (
     <div>
-      <label className="block text-sm text-gray-600 mb-1">{label}</label>
+      {label && <label className="block text-sm text-gray-600 mb-1">{label}</label>}
       <div className="relative">
         <input
           type="date"
@@ -29,12 +31,7 @@ const DateOfBirthInput = ({ label, name, value, onChange }) => {
           value={formatDateForInput(value)}
           onChange={handleDateChange}
           className="w-full h-[50px] px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-blue-500 bg-white appearance-none text-[#718EBF] font-[Inter] text-[12px] md:text-[15px] font-normal leading-normal"
-          max={new Date().toISOString().split('T')[0]} // Prevent future dates
-          style={{
-            '::-webkit-calendar-picker-indicator': {
-              backgroundImage: 'none',
-            },
-          }}
+          max={maxDate} // Prevent future dates
         />
         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <svg

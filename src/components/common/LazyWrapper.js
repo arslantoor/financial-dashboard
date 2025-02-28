@@ -1,4 +1,4 @@
-import React, { Suspense ,useEffect} from 'react'
+import { Suspense ,useEffect} from 'react'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 

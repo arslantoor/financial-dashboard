@@ -45,7 +45,7 @@ const PieChartComponent = ({ data, title }) => {
       // Calculate position for the text label
       const labelAngle = currentAngle + angle / 2
       const labelRadius = (d.profit * 4) / 2 // Position label at half the radius
-      var labelX = Math.sin(labelAngle) * labelRadius + 5
+      const labelX = Math.sin(labelAngle) * labelRadius + 5
       const labelY = -Math.cos(labelAngle) * labelRadius - 5 // tollerence for the label
 
       // Add category label
